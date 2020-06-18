@@ -1,0 +1,12 @@
+<li class="list-group-item">
+  <h4>{{ pizzaName }}</h4>
+  
+  <h4>{{getStatus() }} €</h4>
+  <h4 *ngIf="show" >{{ pizzaIngredients }}</h4>
+  
+  
+
+  <button class="btn btn-primary" (click)="toggle()" id="bt">
+    {{buttonName}}
+</button>
+</li>
