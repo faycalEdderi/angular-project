@@ -1,9 +1,11 @@
 export class PizzaService {
 
+  imageSrc = 'assets/images/margherita.jpg'  
+
     pizzas = [
         {
           id:'1',
-          name: 'Pizza Margarita',
+          name: 'Pizza Margherita',
           price: '10',
           ingredients: 'Base sauce tomate - Fromage'
         },

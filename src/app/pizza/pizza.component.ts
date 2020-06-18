@@ -1,4 +1,5 @@
 import { Component,Input, OnInit } from '@angular/core';
+import { PizzaService } from '../service/pizza.service';
 
 @Component({
   selector: 'app-pizza',
@@ -6,34 +7,38 @@ import { Component,Input, OnInit } from '@angular/core';
   styleUrls: ['./pizza.component.scss']
 })
 export class PizzaComponent implements OnInit {
+  pizzas: any[];
 
-  @Input() pizzaId: string;
-  @Input() pizzaName: string;
-  @Input() pizzaPrice: string;
-  @Input() pizzaIngredients: string;
+  imageSrc :any
+  
+ 
 
-  public show:boolean = false;
   public buttonName:any = 'Afficher Ingrédients';
+  public show:boolean = false;
+  
   
   
 
-  constructor() { }
+  constructor(private pizzaService: PizzaService) { }
 
   ngOnInit(): void {
+
+    this.pizzas = this.pizzaService.pizzas;
+    this.imageSrc= this.pizzaService.imageSrc
   }
 
   getStatus() {
-    return this.pizzaPrice;
+    
   }
   toggle() {
     this.show = !this.show;
   
-    // CHANGE THE NAME OF THE BUTTON.
     if(this.show)  
       this.buttonName = "Cacher Ingrédients";
     else
       this.buttonName = "Afficher Ingrédients";
   }
+  
   
 
 }

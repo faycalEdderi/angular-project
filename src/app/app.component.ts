@@ -7,10 +7,10 @@ import { PizzaService } from './service/pizza.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  pizzas: any[];
-  
+ 
+  logo = 'assets/images/logo.png'  
 
-  constructor(private pizzaService: PizzaService) {
+  constructor() {
 
     
     
@@ -18,9 +18,9 @@ export class AppComponent implements OnInit {
 
 ngOnInit() {
 
-  this.pizzas = this.pizzaService.pizzas;
-
 }
+
+
 
 
 
