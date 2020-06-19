@@ -1,17 +1,18 @@
- 
+<div class="container bg-light  ">
 
-    <h2 class="text-center">Nos Menus</h2>
+    <h2 class="text-center text-light bg-dark">Nos Menus</h2>
 
-<div class="d-flex flex-row ">
-    <div class="" *ngFor="let menu of menus">
-        
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">{{menu.name}}</h5>
-                <h6 class="card-subtitle mb-2">{{menu.price}}€</h6>
-                <p class="card-text">{{menu.contenu}}.</p>
+    <div class="d-flex flex-row flex-wrap justify-content-between ">
+        <div class="" *ngFor="let menu of menus">
+            
+            <div class="card m-5" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{menu.name}}</h5>
+                    <h6 class="card-subtitle mb-2">{{menu.price}}€</h6>
+                    <p class="card-text">{{menu.contenu}}.</p>
+                </div>
             </div>
-        </div>
+    </div>
 </div>
 
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PizzaService } from './service/pizza.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,14 @@ import { PizzaService } from './service/pizza.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
- 
-  logo = 'assets/images/logo.png'  
 
-  constructor() {
+  title = 'app';
+  router: string;
+   
+
+  constructor(private _router: Router) {
+
+    this.router = _router.url; 
 
     
     
@@ -19,8 +24,6 @@ export class AppComponent implements OnInit {
 ngOnInit() {
 
 }
-
-
 
 
 
