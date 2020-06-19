@@ -4,7 +4,7 @@
       <div class="d-flex flex-row flex-wrap justify-content-between ">
             <div *ngFor="let pizza of pizzas">
                   <div class="card m-5" style="width: 18rem;">
-                        <img class="card-img-top" src="{{imageSrc}}" alt="Card image cap">
+                        <img class="card-img-top" src="{{pizza.img}}" alt="Card image cap">
                         <div class="card-body">
                         <h5 class="card-title">{{pizza.name}}</h5>
                         <h6 class="card-subtitle mb-2">{{pizza.price}}€</h6>
